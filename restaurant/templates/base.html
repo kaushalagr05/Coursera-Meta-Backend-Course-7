@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Little Lemon Restaurant{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'restaurant/css/style.css' %}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="{% url 'home' %}" class="logo-area">
+        <img src="{% static 'restaurant/img/logo.svg' %}" alt="Little Lemon Logo">
+        <span class="logo-text">LITTLE <span>LEMON</span></span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'menu' %}">Menu</a></li>
+          <li><a href="{% url 'book' %}">Book Table</a></li>
+          <li><a href="{% url 'reservations' %}">Reservations</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Content Block -->
+  {% block content %}
+  {% endblock %}
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Little Lemon</h4>
+        <p>We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <p>Mon - Fri: 10:00 AM - 10:00 PM</p>
+        <p>Sat - Sun: 11:00 AM - 11:00 PM</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact & Location</h4>
+        <p>331 E Chicago, LaSalle Street</p>
+        <p>Chicago, Illinois 60602</p>
+        <p>Phone: (312) 555-0199</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Little Lemon Restaurant. Meta Back-End Capstone Course 7.</p>
+    </div>
+  </footer>
+
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

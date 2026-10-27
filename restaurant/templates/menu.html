@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Menu | Little Lemon Restaurant{% endblock %}
+
+{% block content %}
+<main>
+  <div style="text-align: center; margin-bottom: 2.5rem;">
+    <h1 style="font-family: var(--font-heading); font-size: 3rem; color: var(--primary-green);">Our Menu</h1>
+    <p style="color: #666; font-size: 1.1rem;">Explore our exquisite Mediterranean dishes</p>
+  </div>
+
+  <div class="menu-grid">
+    {% for item in menu %}
+    <div class="menu-card">
+      <h3>
+        <a href="{% url 'menu_item' pk=item.pk %}" style="text-decoration: none; color: inherit;">{{ item.name }}</a>
+        <span class="menu-price">${{ item.price }}</span>
+      </h3>
+      <p>{{ item.menu_item_description }}</p>
+    </div>
+    {% empty %}
+    <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; background: white; border-radius: 12px;">
+      <p style="color: #888; font-size: 1.1rem;">Menu items will appear here once added to the database.</p>
+    </div>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}

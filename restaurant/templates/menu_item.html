@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ menu_item.name|default:"Menu Item" }} | Little Lemon Restaurant{% endblock %}
+
+{% block content %}
+<main>
+  <div style="max-width: 650px; margin: 0 auto; background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-top: 6px solid var(--primary-yellow);">
+    {% if menu_item %}
+      <h1 style="font-family: var(--font-heading); font-size: 2.5rem; color: var(--primary-green); margin-bottom: 0.5rem;">{{ menu_item.name }}</h1>
+      <h2 style="color: var(--secondary-peach); font-size: 1.8rem; margin-bottom: 1.2rem;">${{ menu_item.price }}</h2>
+      <p style="font-size: 1.15rem; color: #444; line-height: 1.8; margin-bottom: 2rem;">{{ menu_item.menu_item_description }}</p>
+    {% else %}
+      <p style="color: #888;">No menu item details available.</p>
+    {% endif %}
+    <a href="{% url 'menu' %}" style="color: var(--primary-green); font-weight: 700; text-decoration: none;">&larr; Back to Menu</a>
+  </div>
+</main>
+{% endblock %}

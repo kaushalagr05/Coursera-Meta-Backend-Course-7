@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | Little Lemon Restaurant{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1>Little Lemon</h1>
+      <h2>Chicago</h2>
+      <p>We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. Experience culinary delight in our cozy atmosphere.</p>
+      <a href="{% url 'book' %}" class="cta-button">Reserve a Table</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=640&q=80" alt="Little Lemon signature dish">
+    </div>
+  </div>
+</section>
+
+<main>
+  <section style="text-align: center; margin-bottom: 3rem;">
+    <h2 style="font-family: var(--font-heading); font-size: 2.5rem; color: var(--primary-green); margin-bottom: 1rem;">This Week's Specials!</h2>
+    <p style="max-width: 650px; margin: 0 auto; color: #555;">Handcrafted dishes using locally sourced farm fresh ingredients and generational Mediterranean recipes.</p>
+  </section>
+
+  <div class="menu-grid">
+    <div class="menu-card">
+      <h3>Greek Salad <span class="menu-price">$12.99</span></h3>
+      <p>The famous Greek salad of crispy lettuce, peppers, olives, and our Chicago-style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
+    </div>
+    <div class="menu-card">
+      <h3>Bruschetta <span class="menu-price">$7.99</span></h3>
+      <p>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Topped with fresh diced tomatoes.</p>
+    </div>
+    <div class="menu-card">
+      <h3>Lemon Dessert <span class="menu-price">$6.50</span></h3>
+      <p>This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
+    </div>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us | Little Lemon Restaurant{% endblock %}
+
+{% block content %}
+<main>
+  <section style="background: white; padding: 3rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); max-width: 900px; margin: 0 auto;">
+    <h1 style="font-family: var(--font-heading); font-size: 3rem; color: var(--primary-green); margin-bottom: 0.5rem;">Little Lemon Story</h1>
+    <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--secondary-peach); margin-bottom: 1.5rem;">Chicago, Illinois</h3>
+    <p style="font-size: 1.15rem; margin-bottom: 1.2rem; color: #444;">
+      Based in Chicago, Illinois, Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. The chefs Adrian and Mario draw inspiration from Italian, Greek, and Turkish culture and have developed a menu of delicious rustic dishes and specialty drinks.
+    </p>
+    <p style="font-size: 1.15rem; margin-bottom: 2rem; color: #444;">
+      Our mission is to bring you warmth, hospitality, and unforgettable meals prepared with genuine passion and the highest quality ingredients.
+    </p>
+    <a href="{% url 'book' %}" class="cta-button">Reserve a Table with Us</a>
+  </section>
+</main>
+{% endblock %}

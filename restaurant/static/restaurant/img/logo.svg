@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48">
+  <defs>
+    <linearGradient id="lemonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFD96"/>
+      <stop offset="100%" stop-color="#F4CE14"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#738F87"/>
+      <stop offset="100%" stop-color="#495E57"/>
+    </linearGradient>
+  </defs>
+  <!-- Lemon body -->
+  <path d="M 50 15 C 75 15 88 35 88 50 C 88 68 75 85 50 85 C 25 85 12 68 12 50 C 12 35 25 15 50 15 Z" fill="url(#lemonGrad)" stroke="#c4a510" stroke-width="2"/>
+  <!-- Lemon tips -->
+  <path d="M 88 50 C 94 48 97 50 97 50 C 97 50 94 52 88 50 Z" fill="#F4CE14" stroke="#c4a510" stroke-width="1.5"/>
+  <path d="M 12 50 C 6 48 3 50 3 50 C 3 50 6 52 12 50 Z" fill="#F4CE14" stroke="#c4a510" stroke-width="1.5"/>
+  <!-- Leaf -->
+  <path d="M 50 16 C 55 5 70 4 72 10 C 72 18 60 22 50 16 Z" fill="url(#leafGrad)"/>
+</svg>
